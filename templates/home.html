@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blixora Labs - Home</title>
+  <style>
+    /* Full screen fixed background */
+    body { 
+      margin: 0; 
+      padding: 0; 
+      font-family: Arial, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1505699261378-c372af38134c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+      background-size: cover;
+      color: #000000;  
+    }
+
+    header { 
+      
+      color: white; 
+      padding: 15px 30px; 
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { height: 45px; }
+    nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
+    nav a:hover { color: #62b6d7; }
+
+    .hero { 
+      text-align: center; 
+      padding: 200px 40px; 
+      background: rgba(0, 0, 0, 0.4);
+      color: white; 
+    }
+
+    .hero h1 { font-size: 2.8em; margin-bottom: 10px; }
+    .hero p { font-size: 1.2em; margin-bottom: 20px; }
+    .hero button { 
+      padding: 12px 25px; 
+      background: white; 
+      color: #0078ff; 
+      border: none; 
+      border-radius: 5px; 
+      font-size: 1em; 
+      font-weight: bold; 
+      cursor: pointer; 
+      transition: 0.3s;
+    }
+    .hero button:hover { background: #f2f2f2; transform: scale(1.05); }
+
+    .features { padding: 100px 40px; text-align: center; }
+    .feature-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+    .card { 
+      background: white; 
+      padding: 20px; 
+      width: 250px; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
+
+    .cta { color: white; padding: 50px 20px; text-align: center; }
+    .cta button { 
+      padding: 10px 20px; 
+      color: #0078ff; 
+      border: none; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      cursor: pointer; 
+      transition: 0.3s;
+    }
+    .cta button:hover { background: #e6e6e6; transform: scale(1.05); }
+
+    footer { background: #1a1a1a; color: white; padding: 15px; text-align: center; }
+    footer a { color: #fffdfd; text-decoration: none; margin: 0 10px; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <img src="{{ url_for('static', filename='Blixora Labs LOGO.png') }}" alt="Logo" class="logo">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/simulations">Simulations</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/admin">Admin</a>
+        <a href="/register">Sign Up</a>
+        <a href="/login">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Simulate. Solve. Succeed.</h1>
+    <p>Intro to Blixora Labs</p>
+    <a href="/register"><button>Get Started</button></a>
+  </section>
+
+  <section class="features">
+    <h2>Features</h2>
+    <div class="feature-cards">
+      <div class="card">Cybersecurity Challenges</div>
+      <div class="card">AI Mini Projects</div>
+      <div class="card">Cloud Deployment Tasks</div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to get started?</h2>
+    <a href="/register"><button>Sign Up</button></a>
+  </section>
+
+  <footer>
+    <a href="#">Footer Link</a> | 
+    <a href="#">Footer Link</a> | 
+    <a href="#">Footer Link</a>
+  </footer>
+</body>
+</html>
